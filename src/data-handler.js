@@ -15,15 +15,13 @@ function transformInputDataToIterableObject() {
     exeTime: [],
     interArrivalTime: [],
   };
-  let cont = 0; // contador para limitar o tamanho da base de dados
   for (const line of splitedStringArray) {
-    if (cont < 500) {
+    if (line.trim()) {
       const splitedLine = line.split(";");
       obj.subTime.push(parseInt(splitedLine[0]));
       obj.numProcs.push(parseInt(splitedLine[1]));
       obj.exeTime.push(parseInt(splitedLine[2]));
-      cont++;
-    } else break;
+    }
   }
   obj.interArrivalTime = calcInterArrivalTime(obj);
   const outDir = Path.resolve(__dirname, "../public/", "temp.json");

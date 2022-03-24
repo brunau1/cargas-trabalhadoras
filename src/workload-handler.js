@@ -2,7 +2,7 @@ const {
   calcAverage,
   calcStandardDeviation,
   calcVariationCoefficient,
-} = require("./math-handler");
+} = require("./math-handler/math-handler");
 
 function generateWorkLoadModelObject() {
   return {

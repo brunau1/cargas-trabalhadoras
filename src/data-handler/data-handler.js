@@ -2,7 +2,7 @@ const Fs = require("fs");
 const Path = require("path");
 
 function transformInputDataToIterableObject() {
-  const filename = Path.resolve(__dirname, "../public/logSupercomputador.txt");
+  const filename = Path.resolve(__dirname, "../../public/", "logSupercomputador.txt");
   const inputString = Fs.readFileSync(filename, "utf8");
   const sanitizedInputString = inputString
     .replace(/\r/g, "")
@@ -24,7 +24,7 @@ function transformInputDataToIterableObject() {
     }
   }
   obj.interArrivalTime = calcInterArrivalTime(obj);
-  const outDir = Path.resolve(__dirname, "../public/", "temp.json");
+  const outDir = Path.resolve(__dirname, "../../public/", "temp.json");
   Fs.writeFileSync(outDir, JSON.stringify(obj, null, 2));
   return obj;
 }

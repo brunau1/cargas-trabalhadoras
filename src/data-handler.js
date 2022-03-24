@@ -29,26 +29,6 @@ function transformInputDataToIterableObject() {
   return obj;
 }
 
-function generateWorkLoadModelObject() {
-  return {
-    numProcs: {
-      average: 0,
-      standardDeviation: 0,
-      variationCoefficient: 0,
-    },
-    exeTime: {
-      average: 0,
-      standardDeviation: 0,
-      variationCoefficient: 0,
-    },
-    interArrivalTime: {
-      average: 0,
-      standardDeviation: 0,
-      variationCoefficient: 0,
-    },
-  };
-}
-
 function calcInterArrivalTime(obj) {
   const interArrivalTime = [0];
 
@@ -62,5 +42,4 @@ function calcInterArrivalTime(obj) {
 
 module.exports = {
   transformInputDataToIterableObject,
-  generateWorkLoadModelObject,
 };

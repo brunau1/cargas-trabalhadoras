@@ -53,13 +53,13 @@ const numProcsHistogramRules = [
 
 const interArrivalTimeHistogramRules = [
 	{
-		condition: (interArrivalTime) => interArrivalTime < 120,
-		label: '0-120s',
+		condition: (interArrivalTime) => interArrivalTime < 100,
+		label: '0-100s',
 	},
 	{
 		condition: (interArrivalTime) =>
-			interArrivalTime >= 120 && interArrivalTime < 300,
-		label: '120-300s',
+			interArrivalTime >= 100 && interArrivalTime < 300,
+		label: '100-300s',
 	},
 	{
 		condition: (interArrivalTime) =>

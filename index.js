@@ -12,7 +12,9 @@ const {
 const {
 	showGeneratedWorkLoadModel,
 } = require('./src/view-handler/view-handler');
-const { generateWorkLoadModel } = require('./src/workload-handler');
+const {
+	generateWorkLoadModel,
+} = require('./src/workload-handler/workload-handler');
 
 const formatedInputData = transformInputDataToIterableObject();
 const workLoadModel = generateWorkLoadModel(formatedInputData);
